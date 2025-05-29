@@ -1,0 +1,35 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #111;
+  color: #eee;
+  margin: 0;
+  padding: 20px;
+}
+h1 {
+  color: #00ff99;
+}
+#chatbot-container {
+  margin-top: 20px;
+  padding: 20px;
+  background: #222;
+  border-radius: 8px;
+}
+#chatlog {
+  min-height: 150px;
+  margin-bottom: 10px;
+  padding: 10px;
+  background: #000;
+  color: #0f0;
+  border: 1px solid #444;
+}
+#userInput {
+  width: 70%;
+  padding: 10px;
+}
+button {
+  padding: 10px;
+  background: #00ff99;
+  color: #000;
+  border: none;
+  cursor: pointer;
+}
