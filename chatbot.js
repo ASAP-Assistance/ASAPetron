@@ -19,7 +19,13 @@ async function askAI() {
     let reply = "Something went wrong!";
     try {
       const data = JSON.parse(text);
-      reply = data.choices?.[0]?.message?.content || data.error || reply;
+    if (data.choices && data.choices[0] && data.choices[0].message) {
+  reply = data.choices[0].message.content;
+} else if (data.error) {
+  reply = data.error.message || JSON.stringify(data.error);
+} else {
+  reply = "Asapetron couldn't understand that.";
+}
     } catch (jsonErr) {
       console.error("Invalid JSON from chat.php:", text);
     }
