@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,10 +11,17 @@
   <h1>Welcome to ASAP Assistance and Supplies</h1>
   <p>Your trusted provider for security gear and electrical tools.</p>
 
-  <!-- Chatbot Widget -->
-  <div id="chatbot-container">
+  <!-- Floating Chatbot Button -->
+  <div id="chatbot-button" onclick="toggleChatbot()">💬 Chat with Asapetron</div>
+
+  <!-- Floating Chatbot Window -->
+  <div id="chatbot-float">
+    <div id="chat-header">
+      <span>Asapetron AI</span>
+      <button onclick="toggleChatbot()">×</button>
+    </div>
     <div id="chatlog"></div>
-    <input id="userInput" placeholder="Ask Asapetron AI..." />
+    <input id="userInput" type="text" placeholder="Ask something..." autocomplete="off" />
     <button onclick="askAI()">Send</button>
   </div>
 
